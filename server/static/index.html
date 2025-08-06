@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildfire Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wildfire Prediction System</h1>
+        <div class="sensor-form">
+            <h2>Upload Sensor Data</h2>
+            <form id="upload-form">
+                <label for="grid-x">Grid X:</label>
+                <input type="number" id="grid-x" name="grid-x" required>
+                <label for="grid-y">Grid Y:</label>
+                <input type="number" id="grid-y" name="grid-y" required>
+                <label for="temperature">Temperature:</label>
+                <input type="number" step="0.1" id="temperature" name="temperature" required>
+                <label for="humidity">Humidity:</label>
+                <input type="number" step="0.1" id="humidity" name="humidity" required>
+                <label for="wind-speed">Wind Speed:</label>
+                <input type="number" step="0.1" id="wind-speed" name="wind-speed" required>
+                <button type="submit">Upload Data</button>
+            </form>
+            <p id="upload-status"></p>
+        </div>
+        <div class="prediction-section">
+            <h2>Predict Wildfire</h2>
+            <button id="predict-button">Predict</button>
+            <div id="prediction-results">
+                <p><strong>Overall Probability:</strong> <span id="overall-probability">-</span></p>
+                <p><strong>Predicted Direction:</strong> <span id="predicted-direction">-</span></p>
+                <h3>Sensor Probabilities</h3>
+                <table id="sensor-probabilities">
+                    <thead>
+                        <tr>
+                            <th>Grid X</th>
+                            <th>Grid Y</th>
+                            <th>Probability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

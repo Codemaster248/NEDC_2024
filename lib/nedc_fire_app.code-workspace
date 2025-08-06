@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../server"
+		},
+		{
+			"name": "client",
+			"path": "../../../Documents/PlatformIO/Projects/client"
+		}
+	]
+}
